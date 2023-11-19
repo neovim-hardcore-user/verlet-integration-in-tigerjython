@@ -76,6 +76,8 @@ makeTurtle()
 speed(-1)
 hideTurtle()
 
+p = getPlayground()
+p.enableRepaint(False)
 
         
         
@@ -103,8 +105,9 @@ while True:
                                        grid_dict[c[0]-1, c[1]+1] +
                                        grid_dict[c[0]-1, c[1]])
 
-    clear()
+    p.clear()
 
     for point in points:
         setPos(point[0], point[1])
         dot(point_radius*2)
+    p.repaint()
